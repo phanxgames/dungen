@@ -1,6 +1,7 @@
 {
   "name": "dungen",
   "version": "1.0.0",
-  "dependencies": {
+  "devDependencies": {
+    "@types/node": "^20.4.9"
   }
 }
