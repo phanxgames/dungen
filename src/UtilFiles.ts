@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const tmx = require('tmx-parser');
+
 
 export class UtilFiles {
 
@@ -7,6 +9,20 @@ export class UtilFiles {
         try {
             fs.mkdirSync(dir);
         } catch (e) {}
+    }
+
+    static readFile(path:string):string {
+        return fs.readFileSync(path);
+    }
+
+    static async loadTmx(path:string):Promise<any> {
+        return new Promise(resolve => {
+            tmx.parseFile(path, function (err, map) {
+                if (err) throw err;
+                console.log(map);
+                resolve(map);
+            });
+        });
     }
 
     static saveFile(path:string, data:string):void {

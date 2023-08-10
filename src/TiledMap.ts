@@ -36,7 +36,7 @@ export class TiledMap {
 
             for (let x=0; x<room.width; x++) {
                 for (let y=0; y<room.height; y++) {
-                    mapLayer.data[roomX+x][roomY+y] = roomLayer[x][y];
+                    mapLayer.data[roomY+x][roomX+y] = roomLayer[x][y];
                 }
             }
 
@@ -57,7 +57,10 @@ export class TiledMap {
 <map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="${width}" height="${height}" tilewidth="16" tileheight="16" infinite="0" nextlayerid="${this.layers.length}" nextobjectid="1">
 \n`;
 
-        data += `<tileset firstgid="1" source="system.tsx" />\n`;
+        data += `  <tileset firstgid="1" source="system.tsx"/>
+                     <tileset firstgid="1711" source="domhan_floors.tsx"/>
+                     <tileset firstgid="2515" source="domhan_forest.tsx"/>
+                     <tileset firstgid="3199" source="domhan_forest_doodads.tsx"/>\n`;
 
         let i=0;
         for (let layer of this.layers) {

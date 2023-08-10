@@ -2,13 +2,15 @@
 import {GenMap} from "./GenMap";
 import {TiledMap} from "./TiledMap";
 import {TiledRoom} from "./TiledRoom";
+import {TiledMeta} from "./TiledMeta";
+import {RoomFlags} from "./RoomFlags";
 
 console.log("Welcome to: Phanxgames Dungen");
 console.log("--------------------------------------------------");
 
 let map = new GenMap(10,10);
 
-(()=>{
+(async ()=>{
     let count = 0;
     while(true) {
         count++;
@@ -25,28 +27,52 @@ let map = new GenMap(10,10);
             //map.drawMap(true);
 
 
-            let room = new TiledRoom(5, 5);
-            room.setData([
-                [
-                    [1,1,1,1,1],
-                    [1,2,2,2,1],
-                    [1,2,2,2,1],
-                    [1,2,2,2,1],
-                    [1,1,1,1,1]
-                ],
-                [
-                    [0,0,0,0,0],
-                    [0,0,0,0,0],
-                    [0,0,16,0,0],
-                    [0,0,0,0,0],
-                    [0,0,0,0,0]
-                ]
-            ]);
+            // let room = new TiledRoom(5, 5);
+            // room.setData([
+            //     [
+            //         [1,1,1,1,1],
+            //         [1,2,2,2,1],
+            //         [1,2,2,2,1],
+            //         [1,2,2,2,1],
+            //         [1,1,1,1,1]
+            //     ],
+            //     [
+            //         [0,0,0,0,0],
+            //         [0,0,0,0,0],
+            //         [0,0,16,0,0],
+            //         [0,0,0,0,0],
+            //         [0,0,0,0,0]
+            //     ]
+            // ]);
+
+            let room = new TiledRoom(10,10);
+            room.initLayers(4);
+            let meta = new TiledMeta();
+            await meta.load("../out/meta_forest.tmx");
+
             let tmx = new TiledMap(30, 30, 4);
-            tmx.addRoom(room, 1, 1);
-            tmx.addRoom(room, 6, 11);
-            tmx.addRoom(room, 11, 1);
-            tmx.addRoom(room, 15, 11);
+
+            await room.generateFromMeta(meta, RoomFlags.UP|RoomFlags.DOWN|RoomFlags.LEFT);
+            tmx.addRoom(room, 0, 0);
+
+            await room.generateFromMeta(meta, RoomFlags.UP);
+            tmx.addRoom(room, 10, 0);
+
+            await room.generateFromMeta(meta, RoomFlags.UP|RoomFlags.DOWN|RoomFlags.RIGHT);
+            tmx.addRoom(room, 20, 0);
+
+            await room.generateFromMeta(meta, RoomFlags.UP|RoomFlags.DOWN|RoomFlags.LEFT);
+            tmx.addRoom(room, 0, 10);
+
+            await room.generateFromMeta(meta, 0);
+            tmx.addRoom(room, 10, 10);
+
+            await room.generateFromMeta(meta, RoomFlags.UP|RoomFlags.DOWN|RoomFlags.RIGHT);
+            tmx.addRoom(room, 20, 10);
+
+            await room.generateFromMeta(meta, RoomFlags.LEFT|RoomFlags.DOWN|RoomFlags.RIGHT);
+            tmx.addRoom(room, 10, 20);
+
             tmx.save();
 
             return;
