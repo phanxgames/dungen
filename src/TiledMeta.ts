@@ -12,7 +12,7 @@ export class TiledMeta {
     public innerHSplit:number = 0;
     public innerVSplit:number = 0;
 
-    public data:any = {
+    public data:TiledMetaData = {
         floor: null,
         horizTop: null,
         horizBottom: null,
@@ -43,7 +43,12 @@ export class TiledMeta {
         this.tilesets = data.tilesets;
 
         //floor
-        this.data["floor"] = {layers:[],x:0,y:0,width:10};
+        this.data["floor"] = {
+            layers:[],
+            x:0,
+            y:0,
+            width:10
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<10; y++) {
@@ -55,7 +60,12 @@ export class TiledMeta {
         }
 
         //horizTop
-        this.data["horizTop"] = {layers:[],x:0,y:0,width:10};
+        this.data["horizTop"] = {
+            layers:[],
+            x:0,
+            y:0,
+            width:10
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<6; y++) {
@@ -67,7 +77,12 @@ export class TiledMeta {
         }
 
         //horizBottom
-        this.data["horizBottom"] = {layers:[],x:0,y:6,width:10};
+        this.data["horizBottom"] = {
+            layers:[],
+            x:0,
+            y:6,
+            width:10
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=6; y<10; y++) {
@@ -79,7 +94,12 @@ export class TiledMeta {
         }
 
         //vertTop
-        this.data["vertLeft"] = {layers:[],x:0,y:0,width:5};
+        this.data["vertLeft"] = {
+            layers:[],
+            x:0,
+            y:0,
+            width:5
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<10; y++) {
@@ -91,7 +111,12 @@ export class TiledMeta {
         }
 
         //vertBottom
-        this.data["vertRight"] = {layers:[],x:5,y:0,width:5};
+        this.data["vertRight"] = {
+            layers:[],
+            x:5,
+            y:0,
+            width:5
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<10; y++) {
@@ -103,7 +128,12 @@ export class TiledMeta {
         }
 
         //innerCornerTopLeft
-        this.data["innerCornerTopLeft"] = {layers:[],x:0,y:0,width:this.innerHSplit};
+        this.data["innerCornerTopLeft"] = {
+            layers:[],
+            x:0,
+            y:0,
+            width:this.innerHSplit
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<this.innerVSplit; y++) {
@@ -115,7 +145,12 @@ export class TiledMeta {
         }
 
         //innerCornerTopRight
-        this.data["innerCornerTopRight"] = {layers:[],x:this.innerHSplit,y:0,width:10-this.innerHSplit};
+        this.data["innerCornerTopRight"] = {
+            layers:[],
+            x:this.innerHSplit,
+            y:0,
+            width:10-this.innerHSplit
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<this.innerVSplit; y++) {
@@ -127,7 +162,12 @@ export class TiledMeta {
         }
 
         //innerCornerBottomLeft
-        this.data["innerCornerBottomLeft"] = {layers:[],x:0,y:this.innerVSplit,width:this.innerHSplit};
+        this.data["innerCornerBottomLeft"] = {
+            layers:[],
+            x:0,
+            y:this.innerVSplit,
+            width:this.innerHSplit
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=this.innerVSplit; y<10; y++) {
@@ -139,7 +179,12 @@ export class TiledMeta {
         }
 
         //innerCornerBottomRight
-        this.data["innerCornerBottomRight"] = {layers:[],x:this.innerHSplit,y:this.innerVSplit,width:10-this.innerHSplit};
+        this.data["innerCornerBottomRight"] = {
+            layers:[],
+            x:this.innerHSplit,
+            y:this.innerVSplit,
+            width:10-this.innerHSplit
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=this.innerVSplit; y<10; y++) {
@@ -151,7 +196,12 @@ export class TiledMeta {
         }
 
         //outerCornerTopLeft
-        this.data["outerCornerTopLeft"] = {layers:[],x:0,y:0,width:5};
+        this.data["outerCornerTopLeft"] = {
+            layers:[],
+            x:0,
+            y:0,
+            width:5
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<5; y++) {
@@ -163,7 +213,12 @@ export class TiledMeta {
         }
 
         //outerCornerTopRight
-        this.data["outerCornerTopRight"] = {layers:[],x:5,y:0,width:5};
+        this.data["outerCornerTopRight"] = {
+            layers:[],
+            x:5,
+            y:0,
+            width:5
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=0; y<7; y++) {
@@ -175,7 +230,12 @@ export class TiledMeta {
         }
 
         //outerCornerBottomLeft
-        this.data["outerCornerBottomLeft"] = {layers:[],x:0,y:7,width:5};
+        this.data["outerCornerBottomLeft"] = {
+            layers:[],
+            x:0,
+            y:7,
+            width:5
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=7; y<10; y++) {
@@ -187,7 +247,12 @@ export class TiledMeta {
         }
 
         //outerCornerBottomRight
-        this.data["outerCornerBottomRight"] = {layers:[],x:5,y:7,width:5};
+        this.data["outerCornerBottomRight"] = {
+            layers:[],
+            x:5,
+            y:7,
+            width:5
+        };
         for (let layer of data.layers) {
             let dataLayer = [];
             for (let y=7; y<10; y++) {
@@ -226,6 +291,22 @@ export class TiledMeta {
 }
 
 export interface TiledMetaData {
+    floor: TiledMetaDataSegment,
+    horizTop: TiledMetaDataSegment,
+    horizBottom: TiledMetaDataSegment,
+    vertLeft: TiledMetaDataSegment,
+    vertRight: TiledMetaDataSegment,
+    innerCornerTopLeft: TiledMetaDataSegment,
+    innerCornerTopRight: TiledMetaDataSegment,
+    innerCornerBottomLeft: TiledMetaDataSegment,
+    innerCornerBottomRight: TiledMetaDataSegment,
+    outerCornerTopLeft: TiledMetaDataSegment,
+    outerCornerTopRight: TiledMetaDataSegment,
+    outerCornerBottomLeft: TiledMetaDataSegment,
+    outerCornerBottomRight: TiledMetaDataSegment
+}
+
+export interface TiledMetaDataSegment {
     layers:Array<any>,
     x:number,
     y:number,

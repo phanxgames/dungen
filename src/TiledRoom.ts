@@ -1,4 +1,5 @@
 import {TiledMeta} from "./TiledMeta";
+import {RoomFlags} from "./RoomFlags";
 
 export class TiledRoom {
 
@@ -68,19 +69,19 @@ export class TiledRoom {
             meta.drawToRoom(this,"vertLeft");
         }
 
-        if (bitflag & 1 << 0 && bitflag & 1 << 1) {
+        if ((bitflag & (RoomFlags.UP|RoomFlags.RIGHT)) == (RoomFlags.UP|RoomFlags.RIGHT)) {
             meta.drawToRoom(this,"innerCornerTopRight");
         }
 
-        if (bitflag & 1 << 1 && bitflag & 1 << 2) {
+        if ((bitflag & (RoomFlags.DOWN|RoomFlags.RIGHT)) == (RoomFlags.DOWN|RoomFlags.RIGHT)) {
             meta.drawToRoom(this,"innerCornerBottomRight");
         }
 
-        if (bitflag & 1 << 2 && bitflag & 1 << 3) {
+        if ((bitflag & (RoomFlags.DOWN|RoomFlags.LEFT)) == (RoomFlags.DOWN|RoomFlags.LEFT)) {
             meta.drawToRoom(this,"innerCornerBottomLeft");
         }
 
-        if (bitflag & 1 << 3 && bitflag & 1 << 0) {
+        if ((bitflag & (RoomFlags.LEFT|RoomFlags.UP )) == (RoomFlags.LEFT|RoomFlags.UP)) {
             meta.drawToRoom(this,"innerCornerTopLeft");
         }
 
@@ -88,24 +89,23 @@ export class TiledRoom {
         //OUTER CORNERS
 
 
-        if (!(bitflag & 1 << 0) && !(bitflag & 1 << 1)) {
-            console.log("top right");
+        if (!((bitflag & RoomFlags.UP) || (bitflag & RoomFlags.RIGHT))) {
             meta.drawToRoom(this,"outerCornerTopRight");
         }
 
-        if (!(bitflag & 1 << 1) && !(bitflag & 1 << 2)) {
+        if (!((bitflag & RoomFlags.RIGHT) || (bitflag & RoomFlags.DOWN))) {
             console.log("bottom right");
             meta.drawToRoom(this,"outerCornerBottomRight");
 
         }
 
-        if (!(bitflag & 1 << 2) && !(bitflag & 1 << 3)) {
+        if (!((bitflag & RoomFlags.DOWN) || (bitflag & RoomFlags.LEFT))) {
             console.log("bottom left");
             meta.drawToRoom(this,"outerCornerBottomLeft");
 
         }
 
-        if (!(bitflag & 1 << 3) && !(bitflag & 1 << 0)) {
+        if (!((bitflag & RoomFlags.UP) || (bitflag & RoomFlags.LEFT))) {
             console.log("top left");
             meta.drawToRoom(this,"outerCornerTopLeft");
 
