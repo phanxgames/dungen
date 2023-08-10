@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+
+  <tileset firstgid="1" source="system.tsx"/>
+                     <tileset firstgid="1711" source="domhan_floors.tsx"/>
+                     <tileset firstgid="2515" source="domhan_forest.tsx"/>
+                     <tileset firstgid="3199" source="domhan_forest_doodads.tsx"/>
+
+    <layer id="0" name="Tiled Layer 1" width="30" height="30" locked="1">
+    <data encoding="base64" compression="zlib">eJztlEkOgzAMRVlx/5uELOAgqFQsC+qy7Rkaq7ZkWc5AM7QLIn0hko8fmf7Wd92G2p2M08j6NJkM303x7ZE6JfRP3PVHXKm701Moxxfi8Bqv/nMmLD7hjDwURqov9N9QY0DNWIfL4Jj90ifXmZgj84Empeac4dP2d3G6svUCXbCfxnhdn28R33CfxgUPv0uL4pPsIVBP3k2tHnliOUQeI/havZJ5tSv7aALzTbm/R7gD406Z3Fhe8TNvkAdPm8mN5RAxR8GEd5kTpfNqZn1WsM+8OvOKfKktNa9Kt9S8qs315VUt7op77MurWlyas8yrVlyZVy25Wg7V4vpyrcV8QzlUkxvKtdT2BtDdUJM=</data>
+    </layer>
+
+    <layer id="1" name="Tiled Layer 2" width="30" height="30" locked="1">
+    <data encoding="base64" compression="zlib">eJztlM0OgjAQhLnzOgLqSSN4wgie/EFvPIAHjxg9ivrOLnE2NjVYwdJ46CRfmrBTtsm2E7iOk4MA+NLax5rX1Jv4fPgmxB54wv4BcUA9FHye1Kepz4NvThRgTJxARJxRTwSf6GnjO6L3hriACPuuxI24o54JvhL1tr4SZ6q0dJ+kwv4tsUOdVXlWxPoHX/V9Jvjr/qFbfCae+bDjfrJCzHVquG+Ce7gAppR9uB9divNFlVeqO9BzX7mjM69Ud2CEd6k7r1LF/GO8S915pZo/v8su8upb2bx6l80rq38W57NpcT6bVizlkClxDumWzTUz0p1rD2PLdt4=</data>
+    </layer>
+
+    <layer id="2" name="Tiled Layer 3" width="30" height="30" locked="1">
+    <data encoding="base64" compression="zlib">eJztlEsOgzAMRNmHQ0CTJdAuCwfo/Y+EK0CyTOI4NAapwdJsiJmX7/R1VfUBvUAj0vPHPom+XhMI19vjmdIXmtNowMMs49QLe+K1pfb55jSAPsbvk7O6yH6dwR1OYjbAsYWslXIdqAU9CL9Zv7eBca435Gfr/Tty5D/aw+1Ld8BPmlfcHcDvNXdeSUsjr1LYd17tuXde6XNLyitpSbm560quY854yyENrmTNpXC3N6LB5XLtX+9zLIc0uDlzaAZNt0Wv</data>
+    </layer>
+
+    <layer id="3" name="Tiled Layer 4" width="30" height="30" locked="1">
+    <data encoding="base64" compression="zlib">eJxjYGBg0OWBYHqDgbIXBgyAdlsOoP2jgHpAYYTHoyLQ/0ojJAxGy6tRMNTBaHk1csqrUTAKRsHIAEO9XAMAQjAENA==</data>
+    </layer>
+
+</map>

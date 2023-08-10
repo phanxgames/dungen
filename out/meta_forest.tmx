@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+ <properties>
+  <property name="innerHSplit" type="int" value="6"/>
+  <property name="innerVSplit" type="int" value="7"/>
+ </properties>
+ <tileset firstgid="1" source="system.tsx"/>
+ <tileset firstgid="1711" source="domhan_floors.tsx"/>
+ <tileset firstgid="2515" source="domhan_forest.tsx"/>
+ <tileset firstgid="3199" source="domhan_forest_doodads.tsx"/>
+ <layer id="4" name="Tiled Layer 1" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztmE0OgjAQhV1x/5sACziIUeNSDUv1DEoyk7yM0x8qSf15X/JCUoZ2XqEN06HZbAZRKxocnUHIufF1MXHKKSN2brNxqf68nNGX5yNHtXxozh20jV/mA3NvJf/52r/h4/jUwRnb83FM+Jieuid84JzrO0APW7neRF7OU+C+N4eej9iau0U8zFwlRt+B5tuL0EvfvD6HwnFyfSCTzIWC85ELfk+d5NyJ1NuwoL9SH7E5X+IDv6EONBb6COXm+VgDb7/tnba9kV3DO2lXH6l1ifL6O0XueeOGctc9TPdjb6/EPGx+obE9Hxhb2h8hhBBC/ofQf6y2La3zahH6t6KPOth6OsdHrO6uxdJzhlTdXYvQuYI9X0A0Timpu9empO7+RGrV3Wtj12+ono6tc4yrha2VU/V5qu4mhBBCCCGEEELI7/EAgw+KOQ==
+  </data>
+ </layer>
+ <layer id="1" name="Tiled Layer 2" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztl8FOAkEMhvc+r6MonjQqJwnoCRW5+QAcOELkCMg722bbpGlg7WyUZeH/kmYTZvbvbBMm+YoixlUqis9UPjt7ntcpGGbyNNPSkUzO61LdVORe0NplRt972juVd+y5uc8slesPNfKmO84xk98475GqV5F7S2t3GX0HtHcu73yZ4j7LVK4PA3k6P82b7zgH5y1k3zPVS0XuE631M77jnfauqNZUGzkHP7+ptqlcHwfydH6at5JZWLbSh/d9UE0qcke09prxHfadN3Pu3/p47Pw4byQzt0ykT86cD42f375Z1JnzXxK5Y9pA5I5pA8PAHWP3MpG9hyb63x/XvCcAAAAAALxPez9Xn456d1N4n/Z+rj4d9e6m8D7t/Vx9OurdTeF92vu5+nTUu5vE+rT3c+vTbfDuqE/Du/+XU/LuqE8fu3dHfBreDQAAAAAAAAAAnC8/rBNa/w==
+  </data>
+ </layer>
+ <layer id="2" name="Tiled Layer 3" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztmEEOgyAQRdnLIWx1qa1L6QF6/yMVUkknZMDBSKn2v2QWyjjwATFfpWQYrdTdxsjEpN/tZrm+6XidIVJjJM/Qe67mI1FvXnJymBktU9DPHjronJXC6zeRuXJ99zaukTFwc2EaW6fh82rhx5azJi732fB5tcjVEe7LMK8Wazpae7/TMr1dZR1rc1zy/d2LlAbHIFyLUlz0J8KzqCVtqbPKQXX0iXp+73HtXN9SRqZ/H3S/b/l+9CR/az0AAAAA/A8xLyoJrsav6fD/GGL/IL7tu3N0eD9N/fnRfPeanz6K75Z4Pfju8pzFd+f4vBq+W4rUT0vzapHjzyW+GwAAAAAAAAAAAOfjBSFHPRU=
+  </data>
+ </layer>
+ <layer id="3" name="Tiled Layer 4" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt1zsKgDAQBND0eghjL9h6A+9/IgOSziIgko/vwfY7MM2EUM8239e7UXJke8pyDJSHdi16xgsx9WfVIQDgp0p3aOt7dZQcWemetru/d061P2iD3c2TWNgLuxsAAADo1QVecgW+
+  </data>
+ </layer>
+</map>
